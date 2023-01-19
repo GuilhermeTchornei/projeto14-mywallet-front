@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 20px;
         border: none;
         border-radius: 5px;
+        margin-bottom: 13px;
         ::placeholder{
             font-size: inherit;
             color: inherit;

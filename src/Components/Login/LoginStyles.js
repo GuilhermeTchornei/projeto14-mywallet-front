@@ -7,10 +7,6 @@ export const LoginStyle = styled.form`
     justify-content: center;
     align-items: center;
 
-    input{
-        margin-bottom: 13px;
-    }
-
     button{
         width: 100%;
         height: 46px;
