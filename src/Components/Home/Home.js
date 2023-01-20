@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import UserContext from "../../Context/UserContext";
 import Balance from "./Balance";
 
 export default function Home() {
+    const {user} = useContext(UserContext);
+
     const navigate = useNavigate();
 
     return (
         <>
             <HeaderStyle>
-                <h1>Olá, Fulano</h1>
+                <h1>Olá, { user.name}</h1>
                 <ion-icon name="exit-outline" onClick={() => navigate('/')}></ion-icon>
             </HeaderStyle>
             <Balance />
