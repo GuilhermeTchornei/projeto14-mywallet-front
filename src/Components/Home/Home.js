@@ -6,7 +6,6 @@ import Balance from "./Balance";
 
 export default function Home() {
     const { user } = useContext(UserContext);
-    console.log(user);
 
     const navigate = useNavigate();
 

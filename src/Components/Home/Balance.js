@@ -67,8 +67,10 @@ const Main = styled.main`
 
 const BalanceStyle = styled.div`
     width: 100%;
+    max-width: 300px;
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
 `;
 
 const Total = styled.div`
@@ -77,6 +79,7 @@ const Total = styled.div`
     font-size: 17px;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 
     p.description{
         font-weight: 700;

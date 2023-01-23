@@ -27,8 +27,8 @@ export default function Login() {
     return (
         <LoginStyle onSubmit={login}>
             <Title>MyWallet</Title>
-            <input type='email' placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} value={email} />
-            <input type='password' placeholder="Senha" onChange={(e) => setPassword(e.target.value)} value={password} />
+            <input type='email' placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} value={email} required={true}/>
+            <input type='password' placeholder="Senha" onChange={(e) => setPassword(e.target.value)} value={password} required={true}/>
             <button type="submit">Entrar</button>
             <Link to='/cadastro'>Primeira vez? Cadastre-se!</Link>
         </LoginStyle>

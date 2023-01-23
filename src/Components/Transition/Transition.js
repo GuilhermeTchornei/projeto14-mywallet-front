@@ -16,8 +16,8 @@ export default function Transition({ transitionStr }) {
         const type = transitionStr === "entrada" ? "entry" : "exit";
         const config = {
             headers: {"Authorization": `Bearer ${user.token}`}
-        }
-        axios.post(transitionURL, {value, description, type}, config)
+        };
+        axios.post(transitionURL, {value: parseFloat(value), description, type}, config)
         .then((res) => {
             console.log("Criado com sucesso!");
             navigate('/home');
@@ -32,8 +32,8 @@ export default function Transition({ transitionStr }) {
         <>
             <h1>Nova {transitionStr}</h1>
             <Form onSubmit={newTransition}>
-                <input type='number' placeholder="Valor" onChange={(e) => setValue(parseFloat(e.target.value))} value={value} />
-                <input type='text' placeholder="Descrição" onChange={(e) => setDescription(e.target.value)} value={description} />
+                <input type='number' placeholder="Valor" onChange={(e) => !isNaN(e.target.value) ? setValue(e.target.value) : setValue('') } value={value}  required={true} />
+                <input type='text' placeholder="Descrição" onChange={(e) => setDescription(e.target.value)} value={description}  required={true} />
                 <button type="submit">Salvar {transitionStr}</button>
             </Form>
         </>
