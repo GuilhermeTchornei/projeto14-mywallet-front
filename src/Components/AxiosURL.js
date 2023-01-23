@@ -1,3 +1,3 @@
-export const loginURL = 'http://localhost:5000/sign-in';
-export const signUpURL = 'http://localhost:5000/sign-up'
-export const transitionURL = 'http://localhost:5000/transitions';
+export const loginURL = 'https://mywallet-back-h0hd.onrender.com/sign-in';
+export const signUpURL = 'https://mywallet-back-h0hd.onrender.com/sign-up'
+export const transitionURL = 'https://mywallet-back-h0hd.onrender.com/transitions';
