@@ -18,8 +18,9 @@ export default function Login() {
                 setUser(res.data);
                 navigate('/home');
             })
-            .catch(response => {
-                console.log(response);
+            .catch(res => {
+                console.log(res);
+                alert(res.response.data);
             });
     }
 
@@ -28,7 +29,7 @@ export default function Login() {
             <Title>MyWallet</Title>
             <input type='email' placeholder="E-mail" onChange={(e) => setEmail(e.target.value)} value={email} />
             <input type='password' placeholder="Senha" onChange={(e) => setPassword(e.target.value)} value={password} />
-            <button type="submit" >Entrar</button>
+            <button type="submit">Entrar</button>
             <Link to='/cadastro'>Primeira vez? Cadastre-se!</Link>
         </LoginStyle>
     );
